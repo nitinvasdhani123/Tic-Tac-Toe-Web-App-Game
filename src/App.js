@@ -34,8 +34,9 @@ function App() {
         return;
       }
     }
+    // console.log(count)
     setcount(count + 1)
-
+    // console.log(count)
   }
 
   const handlechange = (index) => {
@@ -44,8 +45,8 @@ function App() {
       return;
     }
     copyarray[index] = symbol;
-    setcurrentvalue(copyarray)
-    whowin(copyarray)
+    setcurrentvalue(copyarray);
+    whowin(copyarray);
     setsymbol(symbol === "X" ? "O" : "X")
     if (count === 8) {
       Swal.fire({
@@ -57,6 +58,8 @@ function App() {
         imageAlt: 'Custom image',
       })
       setcurrentvalue(Array(9).fill(null))
+      setcount(0)
+      // console.log(count)
     }
   }
 
